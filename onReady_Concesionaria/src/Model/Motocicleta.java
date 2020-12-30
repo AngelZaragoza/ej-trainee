@@ -32,7 +32,7 @@ public class Motocicleta extends Vehiculo {
     public String toString() {
         String info = super.toString();        
         info += "Cilindrada: " + cilindrada + "cc // ";
-        info += "Precio: $" +  String.format("%.2f", super.getPrecio());
+        info += "Precio: " + super.getPrecioConFormato();
         return info;        
     }
     

@@ -32,10 +32,6 @@ public abstract class Vehiculo {
     public String getModelo() {
         return modelo;
     }
-
-    public String getMarcaYModelo() {
-        return marca + " " + modelo;
-    }
     
     public void setModelo(String modelo) {
         this.modelo = modelo;
@@ -47,6 +43,14 @@ public abstract class Vehiculo {
 
     public void setPrecio(float precio) {
         this.precio = precio;
+    }
+    
+    public String getMarcaYModelo() {
+        return marca + " " + modelo;
+    }
+    
+    public String getPrecioConFormato() {
+        return "$" + String.format("%.2f", precio);
     }
 
     @Override
