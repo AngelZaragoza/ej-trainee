@@ -33,6 +33,10 @@ public abstract class Vehiculo {
         return modelo;
     }
 
+    public String getMarcaYModelo() {
+        return marca + " " + modelo;
+    }
+    
     public void setModelo(String modelo) {
         this.modelo = modelo;
     }
