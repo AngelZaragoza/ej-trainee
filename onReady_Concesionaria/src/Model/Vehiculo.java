@@ -4,20 +4,18 @@ package Model;
  *
  * @author Angel
  */
-public class Vehiculo {
+public abstract class Vehiculo {
     private String marca;
     private String modelo;
-    private int puertas;
     private float precio;
 
     //Constructores
     public Vehiculo() {
     }
 
-    public Vehiculo(String marca, String modelo, int puertas, float precio) {
+    public Vehiculo(String marca, String modelo, float precio) {
         this.marca = marca;
         this.modelo = modelo;
-        this.puertas = puertas;
         this.precio = precio;
     }
     
@@ -39,16 +37,8 @@ public class Vehiculo {
         this.modelo = modelo;
     }
 
-    public int getPuertas() {
-        return puertas;
-    }
-
-    public void setPuertas(int puertas) {
-        this.puertas = puertas;
-    }
-
     public float getPrecio() {
-        return precio;
+        return precio;        
     }
 
     public void setPrecio(float precio) {
@@ -60,8 +50,6 @@ public class Vehiculo {
         String info = "";
         info += "Marca: " + marca + " // ";
         info += "Modelo: " + modelo + " // ";
-        info += "Puertas: " + puertas + " // ";
-        info += "Precio: " + precio;
         return info;
     }
     

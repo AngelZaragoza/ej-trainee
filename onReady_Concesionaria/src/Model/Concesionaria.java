@@ -10,7 +10,7 @@ public class Concesionaria {
     private ArrayList<Vehiculo> listaVehiculos;
 
     //Constructor
-    public Concesionaria(ArrayList<Vehiculo> listaVehiculos) {
+    public Concesionaria() {
         listaVehiculos = new ArrayList<>();
     }
     
@@ -18,5 +18,11 @@ public class Concesionaria {
     public void agregarVehiculo(Vehiculo nuevo) {
         listaVehiculos.add(nuevo);
         
+    }
+    
+    public void imprimirVehiculos() {
+        for (Vehiculo ve : listaVehiculos) {
+            System.out.println(ve.toString());
+        }
     }
 }
