@@ -1,6 +1,6 @@
 package Model;
 
-import java.util.ArrayList;
+import java.util.*;
 
 /**
  *
@@ -89,5 +89,21 @@ public class Concesionaria {
         }
         
         return result;
+    }
+    
+    public void vehiculosPorPrecio() {
+        //Crea una copia para no alterar la lista original
+        ArrayList<Vehiculo> copia = new ArrayList<>(listaVehiculos);
+        
+        //Interface para ordenar por el precio del Vehiculo
+        Comparator<Vehiculo> cmPrecio = Comparator.comparing(Vehiculo::getPrecio);
+        
+        //Ordena en orden descendente usando el Comparator creado anteriormente
+        Collections.sort(copia, Collections.reverseOrder(cmPrecio));
+                
+        for (Vehiculo ve : copia) {
+            System.out.println(ve.getMarcaYModelo());
+        }        
+        
     }
 }

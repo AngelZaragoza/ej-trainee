@@ -31,7 +31,9 @@ public class OnReady_Concesionaria {
         
         System.out.println("=============================");
 
-        
+        //Listar Vehículos por precio descendente
+        System.out.println("Vehículos ordenados por precio de mayor a menor:");
+        conc.vehiculosPorPrecio();
     }
     
 }
